@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80 # for actual domain http://129.91.12.312:80
+      targetPort: 80 # rel to depl, we r letting cont port at 80
+  selector:
+    app: nginx-deployment

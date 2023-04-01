@@ -1,0 +1,8 @@
+django>=3.2,<4.0
+gunicorn # its a web server gateway interface
+requests
+python-dotenv
+# django-dotenv
+psycopg2-binary 
+django-storages
+boto3
