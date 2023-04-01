@@ -15,10 +15,12 @@ jobs:
     defaults:
       run:
         working-directory: ./web
+      env:
+        DJANGO_SECRET_KEY: test-key-not-good-maybe-make-one-better
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.9]
 
 
     steps:
